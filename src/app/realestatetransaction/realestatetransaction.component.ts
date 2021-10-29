@@ -45,6 +45,9 @@ export class RealestatetransactionComponent implements OnInit {
 
   submit(){
     this.realestatetransactionService.upload(this.myForm.get('fileSource')?.value)
+  }
+
+  refresh(){
     this.list();
   }
 
