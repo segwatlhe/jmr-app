@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <h1>JMR Software</h1>
+</nav>
+<div class="container">
+  <form [formGroup]="myForm">
+    <br/>
+    <div class="form-group">
+      <input
+        formControlName="file"
+        id="file"
+        type="file"
+        class="form-control"
+        (change)="onFileChange($event)">
+      <button class="btn btn-primary" type="submit" (click)="submit()">Submit</button>
+    </div>
+
+  </form>
+  <br/>
+  <!-- list -->
+  <table class="table table-dark">
+    <thead>
+    <tr>
+      <th scope="col">Street</th>
+      <th scope="col">City</th>
+      <th scope="col">Zip</th>
+      <th scope="col">State</th>
+      <th scope="col">Beds</th>
+      <th scope="col">Baths</th>
+      <th scope="col">Sq__ft</th>
+      <th scope="col">Type</th>
+      <th scope="col">Sales Date</th>
+      <th scope="col">Price</th>
+      <th scope="col">Latitude</th>
+      <th scope="col">Longitude</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let realestatetransaction of realestatetransactions | async" class="table-primary">
+      <td>{{realestatetransaction.street}}</td>
+      <td>{{realestatetransaction.city | titlecase}}</td>
+      <td>{{realestatetransaction.zip}}</td>
+      <td>{{realestatetransaction.state}}</td>
+      <td>{{realestatetransaction.beds}}</td>
+      <td>{{realestatetransaction.baths}}</td>
+      <td>{{realestatetransaction.sq__ft}}</td>
+      <td>{{realestatetransaction.type}}</td>
+      <td>{{realestatetransaction.sale_date}}</td>
+      <td>{{realestatetransaction.price}}</td>
+      <td>{{realestatetransaction.latitude}}</td>
+      <td>{{realestatetransaction.longitude}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <span>All Rights Reserved 2021 @JMR Software</span>
+  </div>
+</footer>

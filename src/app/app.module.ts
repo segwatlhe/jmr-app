@@ -3,15 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RealestatetransactionComponent } from './realestatetransaction/realestatetransaction.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RealestatetransactionComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        NgxPaginationModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
