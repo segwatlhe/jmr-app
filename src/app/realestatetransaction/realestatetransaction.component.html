@@ -11,13 +11,12 @@
         type="file"
         class="form-control"
         (change)="onFileChange($event)">
-      <button class="btn btn-primary" type="submit" (click)="submit()">Upload</button>
+      <button class="btn btn-warning" type="submit" (click)="submit()">Upload</button>
     </div>
 
     <br/>
-    <button class="btn btn-primary" type="submit" (click)="refresh()">Reload Table</button>
+    <button class="btn btn-success" type="submit" (click)="refresh()">Reload Table</button>
   </form>
-  <br/>
   <!-- list -->
   <table class="table table-dark">
     <thead>
