@@ -17,7 +17,7 @@
     <br/>
     <button class="btn btn-success" type="submit" (click)="refresh()">Reload Table</button>
   </form>
-  
+
   <!-- list -->
   <table class="table table-dark">
     <thead>
@@ -37,19 +37,19 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let realestatetransaction of realestatetransactions | async" class="table-primary">
-      <td>{{realestatetransaction.street}}</td>
-      <td>{{realestatetransaction.city | titlecase}}</td>
-      <td>{{realestatetransaction.zip}}</td>
-      <td>{{realestatetransaction.state}}</td>
-      <td>{{realestatetransaction.beds}}</td>
-      <td>{{realestatetransaction.baths}}</td>
-      <td>{{realestatetransaction.sq__ft}}</td>
-      <td>{{realestatetransaction.type}}</td>
-      <td>{{realestatetransaction.sale_date}}</td>
-      <td>{{realestatetransaction.price}}</td>
-      <td>{{realestatetransaction.latitude}}</td>
-      <td>{{realestatetransaction.longitude}}</td>
+    <tr *ngFor="let realEstateTransaction of realEstateTransactions | async" class="table-primary">
+      <td>{{realEstateTransaction.street}}</td>
+      <td>{{realEstateTransaction.city | titlecase}}</td>
+      <td>{{realEstateTransaction.zip}}</td>
+      <td>{{realEstateTransaction.state}}</td>
+      <td>{{realEstateTransaction.beds}}</td>
+      <td>{{realEstateTransaction.baths}}</td>
+      <td>{{realEstateTransaction.sq__ft}}</td>
+      <td>{{realEstateTransaction.type}}</td>
+      <td>{{realEstateTransaction.sale_date}}</td>
+      <td>{{realEstateTransaction.price}}</td>
+      <td>{{realEstateTransaction.latitude}}</td>
+      <td>{{realEstateTransaction.longitude}}</td>
     </tr>
     </tbody>
   </table>

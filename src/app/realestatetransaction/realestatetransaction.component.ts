@@ -14,7 +14,7 @@ export class RealestatetransactionComponent implements OnInit {
   constructor(private realestatetransactionService: RealestatetransactionService) { }
 
 
-  realestatetransactions: Observable<Realestatetransaction[]>;
+  realEstateTransactions: Observable<Realestatetransaction[]>;
 
   realEstateTransactionForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(3)]),
@@ -40,7 +40,7 @@ export class RealestatetransactionComponent implements OnInit {
   }
 
   public list(){
-    this.realestatetransactions = this.realestatetransactionService.list();
+    this.realEstateTransactions = this.realestatetransactionService.list();
   }
 
   submit(){
