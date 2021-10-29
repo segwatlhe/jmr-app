@@ -16,7 +16,7 @@ export class RealestatetransactionComponent implements OnInit {
 
   realestatetransactions: Observable<Realestatetransaction[]>;
 
-  myForm = new FormGroup({
+  realEstateTransactionForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(3)]),
     file: new FormControl('', [Validators.required]),
     fileSource: new FormControl('', [Validators.required])  });
@@ -26,14 +26,14 @@ export class RealestatetransactionComponent implements OnInit {
   }
 
   get f(){
-    return this.myForm.controls;
+    return this.realEstateTransactionForm.controls;
   }
 
   onFileChange(event) {
 
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
-      this.myForm.patchValue({
+      this.realEstateTransactionForm.patchValue({
         fileSource: file
       });
     }
@@ -44,7 +44,7 @@ export class RealestatetransactionComponent implements OnInit {
   }
 
   submit(){
-    this.realestatetransactionService.upload(this.myForm.get('fileSource')?.value)
+    this.realestatetransactionService.upload(this.realEstateTransactionForm.get('fileSource')?.value)
   }
 
   refresh(){

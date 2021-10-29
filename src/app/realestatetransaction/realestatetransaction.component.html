@@ -2,7 +2,7 @@
   <h1>JMR Software</h1>
 </nav>
 <div class="container">
-  <form [formGroup]="myForm">
+  <form [formGroup]="realEstateTransactionForm">
     <br/>
     <div class="form-group">
       <input
@@ -17,6 +17,7 @@
     <br/>
     <button class="btn btn-success" type="submit" (click)="refresh()">Reload Table</button>
   </form>
+  
   <!-- list -->
   <table class="table table-dark">
     <thead>
