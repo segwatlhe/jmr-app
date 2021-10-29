@@ -21,9 +21,6 @@ export class RealestatetransactionComponent implements OnInit {
     file: new FormControl('', [Validators.required]),
     fileSource: new FormControl('', [Validators.required])  });
 
-  pageCustomer = 1;
-  countCustomer = 5;
-
   ngOnInit(): void {
     this.list();
   }
@@ -45,14 +42,10 @@ export class RealestatetransactionComponent implements OnInit {
   public list(){
     this.realestatetransactions = this.realestatetransactionService.list();
   }
+
   submit(){
-
-  //  this.myForm.get('fileSource').value;
-    console.log(this.myForm.value);
-    console.log('file', this.myForm.get('file')?.value);
-
     this.realestatetransactionService.upload(this.myForm.get('fileSource')?.value)
-
+    this.list();
   }
 
 }
